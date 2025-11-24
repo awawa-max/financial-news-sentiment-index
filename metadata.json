@@ -1,0 +1,5 @@
+{
+  "name": "FinSent: AI News Sentiment Index",
+  "description": "A portfolio project demonstrating financial news sentiment analysis using NLTK/SpaCy methodologies, powered by Gemini for live demos. Predicts market trends based on news emotion.",
+  "requestFramePermissions": []
+}
