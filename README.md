@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1q3gfFV0C0A-bGvyed0-Ailb4KGxAO7BK
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+financial-news-sentiment-index/
+│
+├── data/
+│   ├── raw_news/            # 原始新闻数据
+│   ├── processed_news/      # 清洗后的文本
+│   ├── market_data/         # 股票/指数行情数据
+│   └── sentiment_index/     # 生成的情绪指数
+│
+├── notebooks/
+│   ├── data_cleaning.ipynb          # 文本预处理
+│   ├── sentiment_analysis.ipynb     # 情绪得分计算
+│   ├── index_construction.ipynb     # 情绪指数构建
+│   └── prediction_model.ipynb       # 回归/预测模型
+│
+├── src/
+│   ├── fetch_news.py                # 新闻抓取脚本
+│   ├── preprocess.py                # 分词、去停用词等
+│   ├── sentiment.py                 # NLTK/SpaCy情绪分析
+│   ├── build_index.py               # 构建情绪指数
+│   └── predict.py                   # 建模预测股票收益
+│
+├── utils/
+│   ├── config.py
+│   └── helpers.py
+│
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── .gitignore
